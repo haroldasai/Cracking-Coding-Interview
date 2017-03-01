@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package pkg2_x_linked_list;
+//package pkg2_x_linked_list;
 import java.util.*;
 /**
  *
