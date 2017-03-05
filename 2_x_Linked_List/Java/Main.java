@@ -23,10 +23,16 @@ public class Main {
         printLinkedList(list);
         System.out.println("\nPrinting LinkedList Using Class method");
         list.printData();
+        System.out.println("\nPrinting Reverse LinkedList Using Class method");
+        list.printReverse(list);
+        int kth = 4;
+        System.out.println("\nPrinting "+ kth + "th" +" to last element");
+        list.kthToLast_2_2(kth, list);
         System.out.println("\n2_1 Remove Dups");
         //list.removeDups_2_1();        
         list.removeDups_2_1_noBuffer();
-        list.printData();       
+        list.printData(); 
+        System.out.println("\n");      
     }
     
     public static void printArray(int[] array){

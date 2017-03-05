@@ -55,6 +55,23 @@ public class Node {
             curr = curr.next;
         }    
     }
-    
-    
+    void printReverse(Node node){
+        if(node.next!=null){
+            printReverse(node.next);
+        } 
+        System.out.printf("%d ", node.data);
+    }
+    int kthToLast_2_2(int k, Node node){
+        int count =0;
+        if(node.next==null){
+            count = 1;             
+        } else {
+            count = kthToLast_2_2(k, node.next)+1;
+        }
+        if(count == k){
+            System.out.printf("%d ", node.data);
+        }
+        return count;          
+    }    
 }
+
