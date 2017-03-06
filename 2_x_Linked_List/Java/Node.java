@@ -23,6 +23,13 @@ public class Node {
             curr = curr.next;
         }
     }
+    Node getKthElement(int k){
+        Node curr = this;
+	for(int i = 1; i < k; i++){
+            curr = curr.next;
+	}
+	return curr;
+    }
     void removeDups_2_1(){
         Node curr = this;
         HashSet<Integer> hset = new HashSet<Integer>();
@@ -72,6 +79,18 @@ public class Node {
             System.out.printf("%d ", node.data);
         }
         return count;          
-    }    
+    }
+    void deleteMiddleNode_2_3(Node mNode){
+       if(mNode!=null){
+	   if(mNode.next.next==null){
+	       mNode.data = mNode.next.data;
+	       mNode.next = null;
+	   }
+	   else if(mNode.next!=null){ 
+	       mNode.data = mNode.next.data;
+	       deleteMiddleNode_2_3(mNode.next);
+	   }
+       } 
+    }
 }
 

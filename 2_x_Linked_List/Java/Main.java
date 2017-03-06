@@ -31,8 +31,17 @@ public class Main {
         System.out.println("\n2_1 Remove Dups");
         //list.removeDups_2_1();        
         list.removeDups_2_1_noBuffer();
-        list.printData(); 
-        System.out.println("\n");      
+        list.printData();
+        //new array
+        Node list_2 = makeList_r2(a);
+        System.out.println("\nPrinting new LinkedList");
+        printLinkedList(list_2);
+        int middle = a.length/2;
+        Node middleNode = list_2.getKthElement(middle);
+        System.out.println("\nMiddle element deleted");
+        list_2.deleteMiddleNode_2_3(middleNode);
+        printLinkedList(list_2);
+        System.out.println();           
     }
     
     public static void printArray(int[] array){
