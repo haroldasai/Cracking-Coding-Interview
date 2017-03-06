@@ -81,16 +81,16 @@ public class Node {
         return count;          
     }
     void deleteMiddleNode_2_3(Node mNode){
-       if(mNode!=null){
-	   if(mNode.next.next==null){
-	       mNode.data = mNode.next.data;
-	       mNode.next = null;
-	   }
-	   else if(mNode.next!=null){ 
-	       mNode.data = mNode.next.data;
-	       deleteMiddleNode_2_3(mNode.next);
-	   }
-       } 
+        if(mNode!=null){
+	    if(mNode.next.next==null){
+	        mNode.data = mNode.next.data;
+	        mNode.next = null;
+	    }
+	    else if(mNode.next!=null){ 
+	        mNode.data = mNode.next.data;
+	        deleteMiddleNode_2_3(mNode.next);
+	    }
+        } 
     }
 }
 
